@@ -1,4 +1,4 @@
-###### Recipe App
+# Recipe App
 This is a react native application for those who loves to cook. Following are it's features:
 - Categorized Cusines
 - Detailed preparation list
@@ -12,3 +12,5 @@ This is a react native application for those who loves to cook. Following are it
 - Redux Thunk
 - Realm DB
 - React Router Flux 
+
+### Screens 
