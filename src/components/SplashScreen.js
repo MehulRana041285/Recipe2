@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { navigateToScreen } from '../actions';
 
@@ -12,7 +12,7 @@ class SplashScreen extends Component {
     }
 
     render() {
-        const { backgroundImage, logo, container } = styles;
+        const { backgroundImage, container } = styles;
         return (
             <View style={container}>
                 <Image 
@@ -20,11 +20,14 @@ class SplashScreen extends Component {
                     style={backgroundImage}
                     resizeMode="cover"
                 />
-                <Image />
-                <Image
-                   style={logo}
-                   source={require('../res/logo.png')}
+                <View style={styles.logoView}> 
+                <Image 
+                    style={styles.logoImage}
+                    source={require('../res/logo.png')}
                 />
+                <Text style={styles.logoText}>Let's Cook</Text>
+                </View>
+                
             </View>
         );
     }
@@ -40,11 +43,22 @@ const styles = {
         width: '100%',
         height: '100%'
     },
-    logo: {
-        height: 150,
-        width: 150,
+    logoView: {
+        justifyContent: 'center',
+        alignItems: 'center',
         position: 'absolute',
+       
     
+    },
+    logoText: {
+        color: 'white',
+        fontSize: 20,
+        fontFamily: 'KaushanScript-Regular',
+        marginTop: 10
+    },
+    logoImage: {
+        height: 100,
+        width: 100
     }
 };
 
